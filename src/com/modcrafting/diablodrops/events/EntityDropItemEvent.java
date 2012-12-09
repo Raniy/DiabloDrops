@@ -2,7 +2,7 @@ package com.modcrafting.diablodrops.events;
 
 import java.util.List;
 
-import net.minecraft.server.ItemStack;
+import net.minecraft.server.v1_4_5.ItemStack;
 
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.Cancellable;
@@ -22,7 +22,7 @@ public class EntityDropItemEvent extends Event implements Cancellable
     private boolean isCancelled = false;
 
     private final LivingEntity entity;
-    private List<net.minecraft.server.ItemStack> list;
+    private List<ItemStack> list;
 
     public EntityDropItemEvent(LivingEntity entity, List<ItemStack> list)
     {
@@ -53,7 +53,7 @@ public class EntityDropItemEvent extends Event implements Cancellable
         isCancelled = bln;
     }
 
-    public List<net.minecraft.server.ItemStack> getDropList()
+    public List<ItemStack> getDropList()
     {
         return list;
     }

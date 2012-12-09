@@ -177,7 +177,8 @@ public class DiabloDrops extends JavaPlugin
         // AutoUpdater
         final PluginDescriptionFile pdf = getDescription();
         if (config.getBoolean("Plugin.AutoUpdate", true))
-            getServer().getScheduler().scheduleAsyncDelayedTask(this,
+        	getServer().getScheduler().runTaskAsynchronously(this,
+           // getServer().getScheduler().scheduleAsyncDelayedTask(this,
                     new Runnable()
                     {
                         @Override
@@ -204,7 +205,9 @@ public class DiabloDrops extends JavaPlugin
                     });
         // Jenkins AutoUpdater
         if (config.getBoolean("Plugin.Dev.Update", false))
-            id = getServer().getScheduler().scheduleAsyncRepeatingTask(this,
+           // id = getServer().getScheduler().scheduleAsyncRepeatingTask(this,
+
+            id = getServer().getScheduler().runTaskTimerAsynchronously(this,
                     new Runnable()
                     {
                         @Override
@@ -245,6 +248,6 @@ public class DiabloDrops extends JavaPlugin
                             }
                             build = up.getBuild();
                         }
-                    }, 0, 2400);
+                    }, 0, 2400).getTaskId();
     }
 }

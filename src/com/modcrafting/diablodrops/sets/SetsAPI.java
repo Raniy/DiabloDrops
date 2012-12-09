@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Set;
 
 import org.bukkit.ChatColor;
-import org.bukkit.craftbukkit.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_4_5.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 

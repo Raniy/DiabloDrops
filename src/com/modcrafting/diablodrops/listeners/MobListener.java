@@ -3,12 +3,12 @@ package com.modcrafting.diablodrops.listeners;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.server.EntityLiving;
+import net.minecraft.server.v1_4_5.EntityLiving;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.entity.CraftLivingEntity;
-import org.bukkit.craftbukkit.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_4_5.entity.CraftLivingEntity;
+import org.bukkit.craftbukkit.v1_4_5.inventory.CraftItemStack;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Monster;
@@ -41,8 +41,8 @@ public class MobListener implements Listener
             if (!plugin.worlds.contains(loc.getWorld().getName())
                     && plugin.config.getBoolean("Worlds.Enabled", false))
                 return;
-            List<net.minecraft.server.ItemStack> list = new ArrayList<net.minecraft.server.ItemStack>();
-            for (net.minecraft.server.ItemStack mItem : ((CraftLivingEntity) event
+            List<net.minecraft.server.v1_4_5.ItemStack> list = new ArrayList<net.minecraft.server.v1_4_5.ItemStack>();
+            for (net.minecraft.server.v1_4_5.ItemStack mItem : ((CraftLivingEntity) event
                     .getEntity()).getHandle().getEquipment())
             {
                 if (mItem != null)
@@ -56,7 +56,7 @@ public class MobListener implements Listener
             plugin.getServer().getPluginManager().callEvent(edie);
             if (edie.isCancelled())
                 return;
-            for (net.minecraft.server.ItemStack is : edie.getDropList())
+            for (net.minecraft.server.v1_4_5.ItemStack is : edie.getDropList())
             {
                 event.getEntity()
                         .getWorld()

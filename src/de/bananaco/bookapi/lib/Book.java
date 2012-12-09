@@ -2,7 +2,7 @@ package de.bananaco.bookapi.lib;
 
 import java.util.List;
 
-import net.minecraft.server.ItemStack;
+import net.minecraft.server.v1_4_5.ItemStack;
 
 /**
  * API for modifying, viewing, and generally having fun with books

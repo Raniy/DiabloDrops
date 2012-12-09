@@ -3,7 +3,7 @@ package com.modcrafting.diablodrops.events;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bukkit.craftbukkit.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_4_5.inventory.CraftItemStack;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
